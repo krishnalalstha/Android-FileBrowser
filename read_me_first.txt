@@ -8,8 +8,8 @@ here is the procedure
 Intent intent = new Intent(FilebrowserDemoActivity.this,
 					FileBrowserActivity.class);
 
-			intent.putExtra(FileBrowserActivity.HOW_MANY_FILE,
-					FileBrowserActivity.PICK_MULTIPLE_FILE);
+			intent.putExtra(FileBrowserActivity.BROWSE_MODE,
+					FileBrowserActivity.MULTIPLE);
 
 			startActivityForResult(intent, REQUEST_FILE_BROWSE);
 
@@ -17,20 +17,18 @@ Intent intent = new Intent(FilebrowserDemoActivity.this,
 Note specify how multiple or single file path return
 
 for multiple file path 
-intent.putExtra(FileBrowserActivity.HOW_MANY_FILE,
-					FileBrowserActivity.PICK_MULTIPLE_FILE);
+intent.putExtra(FileBrowserActivity.BROWSE_MODE,
+					FileBrowserActivity.MULTIPLE);
 for single path return
-intent.putExtra(FileBrowserActivity.HOW_MANY_FILE,
-					FileBrowserActivity.PICK_SINGLE_FILE);
+intent.putExtra(FileBrowserActivity.BROWSE_MODE,
+					FileBrowserActivity.SINGLE);
 
 onActivityResult you take data like this
 
-for picking multiple file path
+
 
 ArraList<String>selectedImagePath = new ArrayList<String>();
-selectedImagePath = data.getStringArrayListExtra(FileBrowserActivity.PICK_MULTIPLE_FILE);
+selectedImagePath = data.getStringArrayListExtra(FileBrowserActivity.RESULT);
 
 
-for picking sinlge file path
-String filepath=data.getStringExtra(FileBrowserActivity.PICK_SINGLE_FILE);
 
