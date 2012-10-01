@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ListbingoTheme" parent="@android:style/Theme.Light">
+     <!--    <item name="android:buttonStyle">@style/CustomButtonStyle</item> -->
+       
+      
+       
+        
+       
+       
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+       
+    </style>
+
+   
+
+   
+
+   
+
+    <style name="listItemTextStyle">
+        <item name="android:textColor">#545353</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.01</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="listItemDescTextStyle">
+        <item name="android:textColor">#757575</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.01</item>
+    </style>
+
+    <style name="MapOverLayItemTitleTextStyle">
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#2f2e2e</item>
+        <item name="android:shadowRadius">0.01</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="CurrentPageInfoStyle">
+        <item name="android:background">@color/header_bgcolor</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">15dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dip</item>
+    </style>
+
+    <!-- <style name="CustomButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/btn_default</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#485153</item>
+        <item name="android:shadowRadius">0.01</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+    </style> -->
+
+    
+
+  
+
+   
+
+  
+
+   <!--  <style name="listItemTitle_small">
+        <item name="android:textColor">@color/price_text_color</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.01</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+    </style> -->
+
+    <!-- adBrowse Page style -->
+
+    <style name="itembrowse_page_description">
+        <item name="android:textColor">#7f7f7f</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+    </style>
+
+  
+
+  
+   
+
+   
+</resources>

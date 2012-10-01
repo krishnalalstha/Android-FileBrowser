@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.filebrowser.IconifiedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_selector_background_filebrowse"
+    android:orientation="vertical"
+    
+   
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/fileIcon"
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right" 
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/checkbox"
+            android:layout_toRightOf="@id/fileIcon"
+            android:orientation="vertical"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/fileText"
+                style="@style/listItemDescTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/fileSize"
+                style="@style/listItemTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowDy="0.5"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dip"
+        android:background="@color/listborder_grey_color" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dip"
+        android:background="@color/white_color" />
+
+</com.example.filebrowser.IconifiedTextView>

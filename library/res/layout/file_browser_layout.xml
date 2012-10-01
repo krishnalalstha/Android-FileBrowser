@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_default_color"
+    android:orientation="vertical" >
+
+   
+
+    <TextView
+        style="@style/CurrentPageInfoStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_a_file" />
+
+    <TextView
+        android:id="@+id/text_imagepath"
+        style="@style/listItemDescTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:background="@color/background_default_color"
+        android:ellipsize="start"
+        android:singleLine="true" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="5dip"
+        android:layout_weight="1"
+        android:background="@color/background_default_color"
+        android:cacheColorHint="@color/background_default_color"
+        android:divider="@null" />
+
+    <Button
+        android:id="@+id/okbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:gravity="center"
+        android:text="@string/add" />
+
+</LinearLayout>
