@@ -21,9 +21,10 @@ import android.widget.TextView;
 
 public class FileBrowserActivity extends ListActivity {
 
-	public static String HOW_MANY_FILE;
-	public static String PICK_MULTIPLE_FILE = "multi_filePathName";
-	public static String PICK_SINGLE_FILE = "single_image_file";
+	public static String BROWSE_MODE;
+	public static String MULTIPLE = "multi_filePathName";
+	public static String SINGLE = "single_image_file";
+	public static String RESULT = "result";
 	public ArrayList<String> selectedImageUriList;
 
 	private enum DISPLAYMODE {
@@ -49,8 +50,8 @@ public class FileBrowserActivity extends ListActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		setContentView(R.layout.file_browser_layout);
-		selectType = getIntent().getStringExtra(HOW_MANY_FILE) == null ? PICK_SINGLE_FILE
-				: getIntent().getStringExtra(HOW_MANY_FILE);
+		selectType = getIntent().getStringExtra(BROWSE_MODE) == null ? SINGLE
+				: getIntent().getStringExtra(BROWSE_MODE);
 
 		selectedImageUriList = new ArrayList<String>();
 		fileFilterArray = getResources()
@@ -65,17 +66,22 @@ public class FileBrowserActivity extends ListActivity {
 	}
 
 	private void returnBack() {
-		Log.v("sleted no", selectedImageUriList.size() + selectType);
-		String file = filepath.getText().toString();
+		final String file = filepath.getText().toString();
 
 		Intent data = new Intent();
-		if (selectType.equals(PICK_SINGLE_FILE)) {
-			data.putExtra(PICK_SINGLE_FILE, file);
+		if (selectType.equals(SINGLE)) {
+			data.putExtra(RESULT, new ArrayList<String>() {
+				private static final long serialVersionUID = 1L;
+
+				{
+					add(file);
+				}
+
+			});
 
 		} else {
 			Log.v("sleted no", selectedImageUriList.size() + "no123");
-			data.putStringArrayListExtra(PICK_MULTIPLE_FILE,
-					selectedImageUriList);
+			data.putStringArrayListExtra(RESULT, selectedImageUriList);
 		}
 		setResult(RESULT_OK, data);
 		finish();
@@ -204,7 +210,7 @@ public class FileBrowserActivity extends ListActivity {
 					fileFilterArray)) {
 
 				Boolean isEnabled = true;
-				
+
 				if (itla.mItems.get(position).isChecked) {
 					itla.mItems.get(position).isChecked = false;
 					if (selectedImageUriList.size() > 0) {
@@ -251,8 +257,6 @@ public class FileBrowserActivity extends ListActivity {
 		}
 		return false;
 	}
-
-	
 
 	public void onBackPressed() {
 		if (this.currentDirectory.getParent() != null) {

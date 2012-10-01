@@ -38,8 +38,8 @@ public class FilebrowserDemoActivity extends Activity {
 
 			Intent intent = new Intent(FilebrowserDemoActivity.this,
 					FileBrowserActivity.class);
-			intent.putExtra(FileBrowserActivity.HOW_MANY_FILE,
-					FileBrowserActivity.PICK_MULTIPLE_FILE);
+			intent.putExtra(FileBrowserActivity.BROWSE_MODE,
+					FileBrowserActivity.SINGLE);
 			startActivityForResult(intent, REQUEST_FILE_BROWSE);
 		}
 	};
@@ -51,7 +51,7 @@ public class FilebrowserDemoActivity extends Activity {
 			imagefilePath="";
 			selectedImagePath = new ArrayList<String>();
 			selectedImagePath = data
-					.getStringArrayListExtra(FileBrowserActivity.PICK_MULTIPLE_FILE);
+					.getStringArrayListExtra(FileBrowserActivity.RESULT);
 			for (String imagePath : selectedImagePath) {
 				Log.v(TAG, imagePath);
 				imagefilePath+=imagePath+"\n";

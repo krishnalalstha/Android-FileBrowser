@@ -17,7 +17,7 @@ public class IconifiedTextListAdapter extends BaseAdapter {
 
 	public IconifiedTextListAdapter(Context context,String selectType) {
 		mContext = context;
-		showCheckBox=selectType.equals(FileBrowserActivity.PICK_SINGLE_FILE)?false:true;
+		showCheckBox=selectType.equals(FileBrowserActivity.SINGLE)?false:true;
 	}
 
 	public void addItem(IconifiedText it) {
